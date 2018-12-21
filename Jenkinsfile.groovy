@@ -31,5 +31,11 @@ pipeline {
         }
     }
 
+    post {
+        success {
+            sh 'Build is success'
+        }
+    }
+
 
 }
