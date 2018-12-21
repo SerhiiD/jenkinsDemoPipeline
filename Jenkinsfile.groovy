@@ -18,6 +18,12 @@ pipeline {
             }            
         }
 
+        stage ('Clean WS') {
+            steps {
+                deleteDir()
+            }
+        }
+
         stage ('Checkout') {
             steps {
                 dir ('sources'){
