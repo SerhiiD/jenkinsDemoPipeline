@@ -17,6 +17,7 @@ pipeline {
                 sh 'echo "branch = ${branch}"'
                 library 'myLib'
                 nothing()
+                nothing.sayHello()
             }            
         }
 
