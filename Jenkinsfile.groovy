@@ -7,7 +7,7 @@ pipeline {
 
     parameters {
         booleanParam defaultValue: true, description: '', name: 'skipTests'
-        string defaultValue: 'tags/jenkins-2.153', description: '', name: 'branch', trim: true
+        string defaultValue: 'jenkins-2.153', description: '', name: 'branch', trim: true
     }
 
     stages {
