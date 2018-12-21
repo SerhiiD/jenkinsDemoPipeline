@@ -18,11 +18,11 @@ pipeline {
             }            
         }
 
-        stage ('Clean WS') {
-            steps {
-                deleteDir()
-            }
-        }
+        // stage ('Clean WS') {
+        //     steps {
+        //         deleteDir()
+        //     }
+        // }
 
         stage ('Checkout') {
             steps {
