@@ -15,6 +15,8 @@ pipeline {
             steps {
                 sh 'echo "skipTests = ${skipTests}"'
                 sh 'echo "branch = ${branch}"'
+                library 'myLib'
+                nothing()
             }            
         }
 
@@ -43,9 +45,7 @@ pipeline {
 
     post {
         success {
-            dir ('sources'){
-                sh 'Build ${BUILD_NUMBER} is success'
-            }
+            sh 'Build ${BUILD_NUMBER} is success'
         }
     }
 
