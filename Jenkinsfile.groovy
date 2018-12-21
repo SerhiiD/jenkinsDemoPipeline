@@ -17,7 +17,11 @@ pipeline {
                 sh 'echo "branch = ${branch}"'
             }            
         }
+
         stage ('Build') {
+            steps {
+                sh 'echo "Build"'
+            }            
 
         }
     }
