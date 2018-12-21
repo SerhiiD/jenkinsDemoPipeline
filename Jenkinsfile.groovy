@@ -18,11 +18,16 @@ pipeline {
             }            
         }
 
-        stage ('Build') {
+        stage ('Checkout') {
             steps {
                 git branch: "${branch}", url: "https://github.com/jenkinsci/jenkins.git"
-            }            
+            }
+        }
 
+        stage ('Build') {
+            steps {
+                sh "mvn clean package -DskipTests=${skipTests}"
+            }
         }
     }
 
