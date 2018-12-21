@@ -20,7 +20,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'echo "Build"'
+                git branch: "${branch}", url: "https://github.com/jenkinsci/jenkins.git"
             }            
 
         }
