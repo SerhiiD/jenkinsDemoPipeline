@@ -33,7 +33,7 @@ pipeline {
 
     post {
         success {
-            sh 'Build is success'
+            sh 'Build ${BUILD_NUMBER} is success'
         }
     }
 
