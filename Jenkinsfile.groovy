@@ -20,7 +20,9 @@ pipeline {
 
         stage ('Checkout') {
             steps {
-                git branch: "${branch}", url: "https://github.com/jenkinsci/jenkins.git"
+                dir ('sources'){
+                    git branch: "${branch}", url: "https://github.com/jenkinsci/jenkins.git"
+                }
             }
         }
 
