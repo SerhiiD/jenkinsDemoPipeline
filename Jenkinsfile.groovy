@@ -34,7 +34,9 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh "mvn clean package -DskipTests=${skipTests}"
+                dir ('sources'){
+                    sh "mvn clean package -DskipTests=${skipTests}"
+                }
             }
         }
     }
