@@ -43,7 +43,9 @@ pipeline {
 
     post {
         success {
-            sh 'Build ${BUILD_NUMBER} is success'
+            dir ('sources'){
+                sh 'Build ${BUILD_NUMBER} is success'
+            }
         }
     }
 
